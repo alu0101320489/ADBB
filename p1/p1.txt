@@ -1,0 +1,38 @@
+Script started on 2022-10-12 14:43:52+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="211" LINES="21"]
+postgres@ubuntu:/home/usuario/practicas/p1$ psql
+psql (12.12 (Ubuntu 12.12-0ubuntu0.20.04.1))
+Type "help" for help.
+
+postgres=# create table usuarios (
+postgres(#   nombre varchar(30),
+postgres(#   clave varchar(10)
+postgres(#  );
+CREATE TABLE
+postgres=# insert into usuarios (nombre, clave) values ('Isa','asdf');
+INSERT 0 1
+postgres=# insert into usuarios (nombre, clave) values ('Pablo','jfx344');
+INSERT 0 1
+postgres=# insert into usuarios (nombre, clave) values ('Ana','tru3fal');
+INSERT 0 1
+postgres-# \dt
+          List of relations
+ Schema |   Name   | Type  |  Owner   
+--------+----------+-------+----------
+
+ public | usuarios | table | postgres
+(1 row)
+
+postgres=# select * from usuarios;
+ nombre |  clave  
+--------+---------
+ Isa    | asdf
+ Pablo  | jfx344
+ Ana    | tru3fal
+(3 rows)
+
+postgres=# \q
+postgres@ubuntu:/home/usuario/practicas/p1$ exit
+exit
+
+Script done on 2022-10-12 14:45:43+00:00 [COMMAND_EXIT_CODE="0"]
+
