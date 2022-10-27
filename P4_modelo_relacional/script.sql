@@ -51,6 +51,7 @@ CREATE TABLE zona_producto(
     ID_zona INT,
     nombre_producto VARCHAR(20),
     fecha VARCHAR(30) NOT NULL,
+    stock INT,
     PRIMARY KEY(nombre_producto, ID_zona),
     CONSTRAINT no_zone
         FOREIGN KEY(ID_zona)
@@ -95,13 +96,13 @@ VALUES
     ('Pedro', 'Messi', 4, '1-4-2020'),
     ('Minguito', 'Abascal', 50, '1-5-2020');
 
-INSERT INTO zona_producto(ID_zona, nombre_producto, fecha)
+INSERT INTO zona_producto(ID_zona, nombre_producto, fecha, stock)
 VALUES
-    (1, 'a', '1-1-2020'),
-    (2, 'b', '1-2-2020'),
-    (3, 'c', '1-3-2020'),
-    (4, 'd', '1-4-2020'),
-    (5, 'e', '1-5-2020');
+    (1, 'a', '1-1-2020', 1),
+    (2, 'b', '1-2-2020', 2),
+    (3, 'c', '1-3-2020', 3),
+    (4, 'd', '1-4-2020', 4),
+    (5, 'e', '1-5-2020', 120);
 
 SELECT * FROM zona;
 SELECT * FROM producto;
